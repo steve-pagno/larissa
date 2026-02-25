@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/main.js" defer></script>
+    <title>Lançamentos | Estúdio Domme</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+
+    <domme-header></domme-header>
+
+    <main>
+        <section class="secao-produto-detalhe">
+            <div class="produto-container-master">
+
+                <div class="galeria-produto">
+                    <div class="miniaturas">
+                        <img src="img/detalhe1.jpg" alt="Miniatura 1" class="thumb ativa">
+                        <img src="img/detalhe2.jpg" alt="Miniatura 2" class="thumb">
+                        <img src="img/detalhe3.jpg" alt="Miniatura 3" class="thumb">
+                    </div>
+                    <div class="imagem-principal">
+                        <img src="img/brando-principal.jpg" alt="Produto Brando">
+                    </div>
+                </div>
+
+                <div class="info-produto-lateral">
+                    <div class="header-produto">
+                        <h1 class="nome-produto">Brando</h1>
+                        <button class="btn-favorito"><i class="fa-regular fa-heart"></i></button>
+                    </div>
+
+                    <div class="designer-bloco">
+                        <div class="designer-foto-circulo">
+                            <img src="img/arthur-casas-perfil.jpg" alt="Arthur Casas">
+                        </div>
+                        <div class="designer-dados">
+                            <span class="label">Designer</span>
+                            <span class="valor">Studio A.</span>
+                        </div>
+                    </div>
+
+                    <div class="detalhes-tecnicos">
+                        <div class="linha-detalhe">
+                            <span class="label">Coleção</span>
+                            <a href="#" class="valor-link">Pixel's</a>
+                        </div>
+                        <div class="linha-detalhe">
+                            <span class="label">Uso</span>
+                            <span class="valor">Indoor</span>
+                        </div>
+                    </div>
+
+                    <div class="acoes-orcamento">
+                        <a href="contato.html" class="link-orcamento">Solicite Orçamento</a>
+                        <div class="share-container-social">
+                            <button id="btnCompartilhar" class="btn-compartilhar">
+                                <i class="fa-solid fa-share-nodes"></i> Compartilhar
+                            </button>
+
+                            <div class="share-menu" id="shareMenu">
+                                <a href="#" onclick="sharePage('whatsapp')">
+                                    <i class="fa-brands fa-whatsapp"></i> WhatsApp
+                                </a>
+                                <a href="#" onclick="sharePage('instagram_direct')">
+                                    <i class="fa-brands fa-instagram"></i> Instagram
+                                </a>
+                                <a href="#" onclick="sharePage('facebook')">
+                                    <i class="fa-brands fa-facebook-f"></i> Facebook
+                                </a>
+                                <a href="#" onclick="sharePage('email')">
+                                    <i class="fa-solid fa-envelope"></i> E-mail
+                                </a>
+                                <a href="#" onclick="sharePage('copy', this)">
+                                    <i class="fa-solid fa-link"></i>
+                                    <span class="btn-text">Copiar Link</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <hr>
+        <section class="secao-infos-tecnicas">
+            <div class="infos-tecnicas-grid">
+
+                <div class="col-infos">
+                    <h4 class="titulo-infos">Dimensões</h4>
+                    <ul class="lista-infos">
+                        <li>110 X 055 X 040h</li>
+                        <li>220 X 055 X 040h</li>
+                    </ul>
+                </div>
+
+                <div class="col-infos col-infos--wide">
+                    <h4 class="titulo-infos">Materiais</h4>
+
+                    <div class="texto-infos">
+                        <p><strong>Versão do aparador disponível nos acabamentos:</strong></p>
+                        <p>Pintura padrão fosca ou brilho.</p>
+
+                        <p>Lâminas A1: Canela Natural, Cinamomo Natural, Ebanizado (poros abertos) ou Muiracatiara.</p>
+                        <p>Lâminas A2: Carvalho Premium, Cinza Catedral, Frassino Wood, Freijó Natural, Nogueira Dark,
+                            Nogueira Natural, Nogueira Nut, Rovere Ebanizado ou Rovere Envelhecido.</p>
+                        <p>Lâminas A3: Platinum Wood, Steel Wood ou Titanium Wood.</p>
+                        <p>Lâminas A4: Pau Ferro Natural.</p>
+                        <p>Cores especiais Sayerlack, Metálico ou Máster Cromo.</p>
+                    </div>
+                </div>
+
+                <div class="col-infos col-infos--right">
+                    <h4 class="titulo-infos">Informações técnicas</h4>
+
+                    <div class="downloads-infos">
+                        <a class="link-download" href="#" download>
+                            <span class="icon-download" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" fill="none">
+                                    <path d="M12 3v10m0 0 4-4m-4 4-4-4" stroke="currentColor" stroke-width="1.8"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                    <path d="M5 15v4h14v-4" stroke="currentColor" stroke-width="1.8"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </span>
+                            <span>2D</span>
+                        </a>
+
+                        <a class="link-download" href="#" download>
+                            <span class="icon-download" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" fill="none">
+                                    <path d="M12 3v10m0 0 4-4m-4 4-4-4" stroke="currentColor" stroke-width="1.8"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                    <path d="M5 15v4h14v-4" stroke="currentColor" stroke-width="1.8"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </span>
+                            <span>3D</span>
+                        </a>
+                    </div>
+
+                    <a class="link-download link-download--full" href="#" download>
+                        <span class="icon-download" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none">
+                                <path d="M12 3v10m0 0 4-4m-4 4-4-4" stroke="currentColor" stroke-width="1.8"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M5 15v4h14v-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </span>
+                        <span>TERMO DE GARANTIA E MANUTENÇÃO</span>
+                    </a>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="hero">
+            <div class="img-placeholder-garantia">
+            </div>
+            <div class="hero-content-garantia">
+                <h1>Garantia para vida toda</h1>
+                <span class="subtitulo">A América Móveis se preocupa tanto com a qualidade de seus produtos e com a
+                    satisfação de seus clientes que criou a Garantia para Toda Vida América. Independente da garantia,
+                    você pode reformar e modernizar o seu estofado América de acordo com seu gosto e necessidade,
+                    pagando um preço justo e renovando assim o tempo de garantia por mais 10 anos.</span>
+            </div>
+        </section>
+
+        <section style="text-align: center;">
+            <h1>Produtos selecionados</h1>
+        </section>
+
+        <section class="secao-grade-produtos">
+            <div class="grade-container">
+
+                <a href="pagina-produto.html" class="produto-item-mini">
+                    <div class="produto-img-mini">
+                        <img src="img/vik-banqueta.jpg" alt="Banqueta Vik">
+                    </div>
+                    <span class="produto-nome-mini">Vik</span>
+                </a>
+
+                <a href="pagina-produto.html" class="produto-item-mini">
+                    <div class="produto-img-mini">
+                        <img src="img/vik-poltrona.jpg" alt="Poltrona Vik">
+                    </div>
+                    <span class="produto-nome-mini">Vik</span>
+                </a>
+
+                <a href="pagina-produto.html" class="produto-item-mini">
+                    <div class="produto-img-mini">
+                        <img src="img/vai-vem.jpg" alt="Cadeira Vai-Vem">
+                    </div>
+                    <span class="produto-nome-mini">Vai-Vem</span>
+                </a>
+
+                <a href="pagina-produto.html" class="produto-item-mini">
+                    <div class="produto-img-mini">
+                        <img src="img/solta.jpg" alt="Cadeira Solta">
+                    </div>
+                    <span class="produto-nome-mini">Solta</span>
+                </a>
+
+            </div>
+        </section>
+    </main>
+
+    <domme-footer></domme-footer>
+
+</body>
+
+</html>

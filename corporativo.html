@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/main.js" defer></script>
+    <title>Corporativo | Estúdio Domme</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        /* Estilos específicos para tornar a página Corporativa mais chamativa */
+        .hero-corp {
+            height: 70vh;
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('img/textura.jpg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            text-align: center;
+        }
+
+        .secao-orcamento-corp {
+            background-color: #111; /* Fundo escuro para contraste */
+            color: #fff;
+            padding: 100px 5%;
+        }
+
+        .container-form-corp {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .form-corp {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-top: 40px;
+        }
+
+        .form-corp input, .form-corp select, .form-corp textarea {
+            grid-column: span 1;
+            padding: 18px;
+            background: #222;
+            border: 1px solid #333;
+            color: #fff;
+            font-family: inherit;
+        }
+
+        .form-corp textarea, .form-corp .full-width {
+            grid-column: span 2;
+        }
+
+        .btn-corp {
+            grid-column: span 2;
+            padding: 20px;
+            background: #fff;
+            color: #000;
+            border: none;
+            font-weight: bold;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .btn-corp:hover {
+            background: #e5e5e5;
+        }
+
+        @media (max-width: 768px) {
+            .form-corp { grid-template-columns: 1fr; }
+            .form-corp input, .form-corp textarea, .form-corp .full-width, .btn-corp { grid-column: span 1; }
+        }
+    </style>
+</head>
+
+<body>
+
+    <domme-header></domme-header>
+
+    <main>
+        <section class="hero-corp">
+            <div class="hero-content-corp">
+                <span class="subtitulo" style="color: #fff;">Soluções B2B</span>
+                <h1 style="font-size: 48px;">Mobiliário de Alto Padrão para Grandes Projetos</h1>
+            </div>
+        </section>
+
+        <section class="secao-biografia-clean">
+            <div class="biografia-container">
+                <div class="biografia-imagem">
+                    <img src="img/marcenaria.jpg" alt="Marcenaria Corporativa">
+                </div>
+                <div class="texto-wrapper-bio">
+                    <h2 class="biografia-titulo">Excelência e Escala</h2>
+                    <p class="biografia-paragrafo">
+                        Atendemos arquitetos, incorporadoras e empresas que buscam transformar ambientes corporativos, hotéis e empreendimentos imobiliários com a assinatura de design do Estúdio Domme.
+                    </p>
+                    <p class="biografia-paragrafo">
+                        Oferecemos condições especiais para compras em volume, suporte técnico dedicado e personalização de acabamentos para alinhar a estética ao DNA da sua marca.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="secao-orcamento-corp">
+            <div class="container-form-corp">
+                <h2 style="text-align: center; margin-bottom: 20px;">Solicite um Orçamento Corporativo</h2>
+                <p style="text-align: center; color: #999;">Nossa equipe técnica entrará em contato em até 24h para discutir os detalhes do seu projeto.</p>
+                
+                <form class="form-corp">
+                    <input type="text" placeholder="Nome Completo" required>
+                    <input type="email" placeholder="E-mail Corporativo" required>
+                    <input type="text" placeholder="Nome da Empresa" required>
+                    <select required>
+                        <option value="" disabled selected>Tipo de Projeto</option>
+                        <option value="residencial">Incorporação Residencial</option>
+                        <option value="hotelaria">Hotelaria</option>
+                        <option value="escritorio">Escritório/Corporativo</option>
+                        <option value="outro">Outros</option>
+                    </select>
+                    <input type="text" placeholder="Telefone/WhatsApp" class="full-width">
+                    <textarea rows="5" placeholder="Descreva brevemente a necessidade do seu projeto (Ex: quantidade de itens, prazos, localização)"></textarea>
+                    
+                    <button type="submit" class="btn-corp">Enviar Solicitação</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <domme-footer></domme-footer>
+
+</body>
+
+</html>

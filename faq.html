@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/main.js" defer></script>
+    <title>FAQ | Estúdio Domme</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .faq-item {
+            border-bottom: 1px solid var(--cor-borda);
+        }
+        
+        /* Estilos do botão da pergunta */
+        .faq-pergunta {
+            width: 100%;
+            text-align: left;
+            padding: 25px 0;
+            background: none;
+            border: none;
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--cor-texto);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-family: inherit;
+            transition: color 0.3s;
+        }
+        
+        .faq-pergunta:hover {
+            color: var(--cor-texto-secundario);
+        }
+        
+        /* Ícone de + e - */
+        .faq-icone {
+            font-size: 24px;
+            font-weight: 300;
+            transition: transform 0.3s ease;
+        }
+        
+        /* Estilos da resposta (escondida por defeito) */
+        .faq-resposta {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease-out;
+        }
+        
+        .faq-resposta p {
+            color: var(--cor-texto-secundario);
+            line-height: 1.8;
+            padding-bottom: 25px; /* Espaço inferior quando aberto */
+            margin: 0;
+        }
+        
+        /* Estado Ativo (Aberto) */
+        .faq-item.ativo .faq-icone {
+            transform: rotate(45deg); /* Roda o '+' para parecer um 'x' */
+        }
+    </style>
+</head>
+<body>
+
+    <domme-header></domme-header>
+
+    <main>
+        <section>
+            <h2 class="titulo-secao">Perguntas Frequentes</h2>
+            
+            <div class="faq-container">
+                <div class="faq-item">
+                    <button class="faq-pergunta">
+                        Como acompanho o status do meu pedido?
+                        <span class="faq-icone">+</span>
+                    </button>
+                    <div class="faq-resposta">
+                        <p>Após a confirmação da compra, receberá um e-mail com as credenciais para aceder à área do cliente. Lá, atualizamos fotograficamente cada etapa do processo artesanal até ao momento do envio.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-pergunta">
+                        Qual é o prazo de produção e entrega?
+                        <span class="faq-icone">+</span>
+                    </button>
+                    <div class="faq-resposta">
+                        <p>Como as nossas peças são produzidas de forma artesanal e sob demanda, o prazo médio de fabrico é de 30 a 45 dias úteis. O tempo de trânsito da transportadora será somado a este prazo dependendo do seu código postal.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-pergunta">
+                        Posso personalizar os acabamentos?
+                        <span class="faq-icone">+</span>
+                    </button>
+                    <div class="faq-resposta">
+                        <p>Sim. A maioria do nosso catálogo permite a personalização de tecidos, couros naturais e tonalidades de madeira. Recomendamos entrar na página de Contato e falar com um de nossos consultores para projetos específicos.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-pergunta">
+                        Como funciona a garantia?
+                        <span class="faq-icone">+</span>
+                    </button>
+                    <div class="faq-resposta">
+                        <p>O Estúdio Domme oferece 5 anos de garantia estrutural para peças de madeira maciça e 1 ano para estofados e revestimentos. A garantia cobre exclusivamente defeitos de fabrico.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="secao-cinza" style="text-align: center;">
+            <h2 style="font-size: 24px; margin-bottom: 20px;">Ainda tem dúvidas?</h2>
+            <p style="color: var(--cor-texto-secundario); margin-bottom: 30px;">A nossa equipa de atendimento está pronta para ajudar no seu projeto.</p>
+            <a href="contato.html" class="btn">Fale Connosco</a>
+        </section>
+    </main>
+
+    <domme-footer></domme-footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const faqItems = document.querySelectorAll('.faq-item');
+
+            faqItems.forEach(item => {
+                const pergunta = item.querySelector('.faq-pergunta');
+                const resposta = item.querySelector('.faq-resposta');
+
+                pergunta.addEventListener('click', () => {
+                    const estaAberto = item.classList.contains('ativo');
+
+                    // (Opcional) Fecha todos os outros accordions antes de abrir o clicado
+                    faqItems.forEach(outroItem => {
+                        outroItem.classList.remove('ativo');
+                        outroItem.querySelector('.faq-resposta').style.maxHeight = null;
+                    });
+
+                    // Se não estava aberto, abre o atual
+                    if (!estaAberto) {
+                        item.classList.add('ativo');
+                        // Define a altura máxima como a altura total do conteúdo para criar uma animação suave
+                        resposta.style.maxHeight = resposta.scrollHeight + "px";
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
